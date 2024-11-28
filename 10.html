@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+</head>
+
+<body>
+    # 10. 请编写一段逻辑将一个数组分组处理（将数组中的元素按每 k 个一组进行分组，并返回二维数组。
+    如果数组长度不能被 k 整除，则最后一组可能包含少于 k 个元素）
+    例子: [1, 2, 3, 4] 、 2 => [[1, 2], [3, 4]]
+    例子: [1, 2, 3] 、 2 => [[1, 2], [3]]
+    <script>
+        let arr1 = [1, 2, 3, 4]
+        let arr2 = [1, 2, 3]
+        function arrayHandle(arr, n) {
+            let res = []
+            for (let i = 0; i < arr.length; i += n) {
+                let temp = arr.slice(i, i + n)
+                res.push(temp)
+            }
+            return res
+        }
+
+        console.log(arrayHandle(arr1, 2));
+        console.log(arrayHandle(arr2, 2));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    # 2. 请编写一段逻辑判断任意一个字符串是否是回文（即正读和反读都相同）。
+    例子: "1234321" => true
+    例子: "123432111" => false
+    <script>
+        let str = '123432111'
+        let flag //假设是回文数
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === str[str.length - 1 - i]) {
+                flag = true
+            } else {
+                flag = false
+                break
+            }
+        }
+        console.log('123432111是回文数吗    ' + flag);
+        
+    </script>
+</body>
+
+</html>

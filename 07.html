@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    # 7. 请编写一段逻辑将包含嵌套数组的数组处理后返回一个新数组，其中所有元素都被扁平化到同一层级。
+    例子: [1,[2,[3]]] => [1,2,3]
+    <script>
+        let arr = [1, [2, [3, 5, 6], [12, [23, 11, [29]]]]]
+        let res = []
+        for (let i = 0; i < arr.length; i++) {
+            let item = arr[i]
+            if (typeof item === "number") {
+                // 如果是数字 直接push到res数组中
+                // 若是数组，继续遍历，将数组中的元素 push到后面
+                res.push(item)
+            } else {
+                for (let n = 0; n < item.length; n++) {
+                    arr.push(item[n])
+                }
+            }
+        }
+        console.log(res);
+
+
+
+    </script>
+</body>
+
+</html>

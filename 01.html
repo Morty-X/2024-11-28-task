@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+
+<body>
+    # 1. 请编写一段逻辑将任意数字数组处理后返回一个新数组，其中不包含任何重复的元素。
+    例子: [1,2,3,4,2,1] => [1,2,3,4]
+    <script>
+        let arr = [1, 2, 3, 4, 2, 1]
+        let res = []
+        for (let i = 0; i < arr.length; i++) {
+            // 假设不存在
+            let flag = false
+            // 遍历res数组，看有没有与arr中相等的元素
+            for (let n = 0; n < res.length; n++) {
+                if (res[n] === arr[i]) {
+                    flag = true
+                    break
+                }
+            }
+            if (!flag) {
+                res.push(arr[i])
+            }
+        }
+        console.log(res);
+
+    </script>
+</body>
+
+</html>
